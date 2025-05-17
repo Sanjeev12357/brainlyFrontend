@@ -1,51 +1,59 @@
-# 🧠 Second Brain – Your Digital Memory Hub
+# 🧠 Second Brain - Social Share Memory App
 
-Second Brain is a modern, elegant, and lightning-fast web application that acts as your personal knowledge base. Capture thoughts, tasks, bookmarks, and ideas — all in one place, accessible anytime, anywhere.
+[Live Demo 🌐](https://socialsshare.devexpertz.me/)
 
-![Second Brain UI Banner](https://your-screenshot-or-banner-url.com) <!-- Replace with actual image link -->
+Second Brain is a personal memory assistant and content organizer that helps you **save, categorize, and revisit** the most valuable online content — currently focused on **YouTube** and **Twitter** links. Think of it as your curated digital second brain.
 
 ---
 
 ## 🚀 Features
 
-- 📝 **Notes** – Create, edit, and organize notes with a clean and distraction-free interface.
-- ✅ **Tasks** – Manage your todos and stay productive with a built-in task manager.
-- 🔖 **Bookmarks** – Save important links and revisit them anytime.
-- 🔍 **Search Everything** – Instantly search across notes, tasks, and bookmarks.
-- 🎨 **Dark/Light Mode** – Choose your aesthetic with smooth theme transitions.
-- 💾 **Persistent Storage** – Your data stays safe (local storage or cloud-based).
-- 🔐 **Authentication** – Secure login for a personal space (optional).
+- 🔗 **Add Shareable Links** – Save tweets and YouTube videos with descriptions.
+- 📂 **Organized Dashboard** – View your saved links in a sleek, responsive layout.
+- 📤 **Generate Shareable Pages** – Easily generate public pages to share your saved content.
+- ⏱️ **Reminder System** – Coming soon: revisit content based on spaced repetition techniques.
+- 🧠 **Minimal Second Brain UX** – A productivity-first approach to saving and reflecting on content.
 
 ---
 
-## 📸 Preview
+## 🛠 Tech Stack
 
-| Notes View | Task Manager | Bookmarks |
-|-----------|--------------|-----------|
-| ![Notes](https://your-notes-preview-url.com) | ![Tasks](https://your-tasks-preview-url.com) | ![Bookmarks](https://your-bookmarks-preview-url.com) |
-
----
-
-## 🛠️ Tech Stack
-
-- ⚛️ **React.js** – Frontend library
-- 🎨 **Tailwind CSS** – Utility-first CSS framework
-- 🧩 **ShadCN UI / Radix UI** – Accessible components
-- 🌈 **Lucide Icons** – Beautiful, open-source icon library
-- 💾 **LocalStorage / IndexedDB / Supabase / Firebase** (pick one)
-- 📦 **Vite** – Blazing-fast build tool
+- **Frontend:** React, Tailwind CSS, React Router
+- **Backend:** Node.js, Express, MongoDB
+- **Auth:** JWT
+- **Misc:** NanoID for share links, Vercel deployment
 
 ---
 
-## 🧰 Installation
+## 📌 To-Do
+
+The following features and enhancements are currently in the pipeline:
+
+1. ✅ **Sidebar Functionality** – Add navigation or filters in the sidebar for better UX.
+2. ✅ **Tags Feature** – Allow users to tag saved content for easier search and categorization.
+3. ✅ **Support More Link Types** – Expand support beyond YouTube and Twitter to:
+   - LinkedIn
+   - GitHub
+   - Medium
+   - Any embeddable content
+4. 🧠 **AI Agent Integration** – Add an AI-powered assistant to summarize, prioritize, and suggest content to revisit.
+5. 🎨 **UX Enhancements** – Polish the UI and improve responsiveness and animations.
+6. 🛠️ **Admin/Analytics Dashboard (Optional)** – A future enhancement for power users.
+
+---
+
+## 🧪 How to Run Locally
 
 ```bash
-# Clone the repository
+# 1. Clone the repo
 git clone https://github.com/your-username/second-brain.git
 cd second-brain
 
-# Install dependencies
+# 2. Install dependencies
 npm install
 
-# Start the dev server
+# 3. Build the project (if needed)
+npm run build
+
+# 4. Start the development server
 npm run dev
