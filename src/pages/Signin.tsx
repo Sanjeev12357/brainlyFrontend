@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Input from "../components/ui/Input";
 import "./Signup.css";
 import { Link, useNavigate } from "react-router-dom";
