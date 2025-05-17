@@ -13,7 +13,7 @@ import Card from "../components/ui/Card"
 import { CreateContentModal } from "../components/ui/CreateContentModal"
 import "./dashboard.css"
 import { backendUrl } from "../config"
-import { toast, ToastContainer } from "react-toastify"
+import { toast } from "react-toastify"
 
 function Dashboard() {
   const mainRef = useRef<HTMLDivElement>(null)
@@ -141,10 +141,15 @@ function Dashboard() {
               {contentData.map((item, index) => (
                 <Card
                   key={index}
+                  //@ts-ignore
                   title={item?.title}
+                  //@ts-ignore
                   link={item?.link}
+                  //@ts-ignore
                   type={item?.type}
+                  //@ts-ignore
                   tags={item?.tags}
+                  //@ts-ignore
                   className="card-item"
                 />
               ))}

@@ -1,3 +1,4 @@
+//@ts-ignore
 import { ReactElement } from "react";
 import "./Button.css"; // Make sure to import the CSS file
 

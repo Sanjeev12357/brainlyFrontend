@@ -13,7 +13,6 @@ interface InputProps {
 
 export default function Input({
   label,
-  placeholder,
   onChange,
   type = 'text',
   value,

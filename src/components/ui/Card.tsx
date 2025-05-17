@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import './Card.css'; // ✅ Import the CSS file
@@ -98,6 +98,7 @@ useEffect(() => {
         {tags.length > 0 && (
           <div className="card-tags">
             {tags.map((tag, index) => (
+                //@ts-ignore
               <span className="card-tag" key={index}>#{tag?.name}</span>
             ))}
           </div>

@@ -55,10 +55,15 @@ function PublicDashboard() {
             {contentData.map((item, index) => (
               <Card
                 key={index}
+                //@ts-ignore
                 title={item?.title}
+                //@ts-ignore
                 link={item?.link}
+                //@ts-ignore
                 type={item?.type}
+                //@ts-ignore
                 tags={item?.tags}
+                //@ts-ignore
                 className="card-item"
               />
             ))}

@@ -2,11 +2,10 @@
 
 import {  useRef } from "react"
 import { gsap } from "gsap"
-import { FileText, Hash, LinkIcon, MessageSquare, Search, Video } from "lucide-react"
+import { FileText, Hash, LinkIcon, MessageSquare, Video } from "lucide-react"
 
 import { SidebarItem } from "./SidebarItem"
 
-import  Input  from "./ui/Input"
 import "./AppSidebar.css"
 import { useGSAP } from "@gsap/react"
 
