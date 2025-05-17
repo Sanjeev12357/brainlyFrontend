@@ -1,106 +1,42 @@
-.button {
+.custom-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  border-radius: 6px;
-  font-size: 0.875rem;
+  padding: 10px 18px;
+  font-size: 14px;
   font-weight: 500;
-  transition: all 0.2s ease;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  outline: none;
-  border: none;
+  gap: 8px;
 }
 
-.button:focus-visible {
-  outline: 2px solid var(--ring);
-  outline-offset: 2px;
+.custom-button.primary {
+  background: linear-gradient(to bottom right, #111, #000);
+  color: white;
+  border: 1px solid #333;
 }
 
-.button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.custom-button.primary:hover {
+  background: linear-gradient(to bottom right, #222, #111);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Variants */
-.button-default {
-  background-color: var(--primary);
-  color: var(--primary-foreground);
+.custom-button.secondary {
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #ccc;
 }
 
-.button-default:hover {
-  background-color: var(--primary-hover);
+.custom-button.secondary:hover {
+  background-color: #e0e0e0;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.button-destructive {
-  background-color: var(--destructive);
-  color: var(--destructive-foreground);
-}
-
-.button-destructive:hover {
-  background-color: var(--destructive-hover);
-}
-
-.button-outline {
-  background-color: transparent;
-  border: 1px solid var(--border);
-  color: var(--foreground);
-}
-
-.button-outline:hover {
-  background-color: var(--muted);
-  color: var(--foreground);
-}
-
-.button-secondary {
-  background-color: var(--secondary);
-  color: var(--secondary-foreground);
-}
-
-.button-secondary:hover {
-  background-color: var(--secondary-hover);
-}
-
-.button-ghost {
-  background-color: transparent;
-  color: var(--foreground);
-}
-
-.button-ghost:hover {
-  background-color: var(--muted);
-  color: var(--foreground);
-}
-
-.button-link {
-  background-color: transparent;
-  color: var(--primary);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.button-link:hover {
-  text-decoration: none;
-}
-
-/* Sizes */
-.button-default {
-  height: 40px;
-  padding: 0 16px;
-}
-
-.button-small {
-  height: 36px;
-  padding: 0 12px;
-  font-size: 0.8125rem;
-}
-
-.button-large {
-  height: 44px;
-  padding: 0 32px;
-}
-
-.button-icon {
-  height: 40px;
-  width: 40px;
-  padding: 0;
+.custom-button .icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

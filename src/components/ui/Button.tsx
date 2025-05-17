@@ -1,24 +1,18 @@
-import type React from "react"
-import { forwardRef } from "react"
-import "./Button.css"
+import { ReactElement } from "react";
+import "./Button.css"; // Make sure to import the CSS file
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
-  size?: "default" | "small" | "large" | "icon"
-  asChild?: boolean
+interface ButtonProps {
+  variant: "primary" | "secondary";
+  text: string;
+  startIcon?: ReactElement;
+  onClick?: () => void;
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "default", size = "default", children, ...props }, ref) => {
-    const buttonClasses = ["button", `button-${variant}`, `button-${size}`, className].filter(Boolean).join(" ")
-
-    return (
-      <button className={buttonClasses} ref={ref} {...props}>
-        {children}
-      </button>
-    )
-  },
-)
-Button.displayName = "Button"
-
-export { Button }
+export function Button({ variant, text, startIcon, onClick }: ButtonProps) {
+  return (
+    <button className={`custom-button text-center ${variant}`} onClick={onClick}>
+      {startIcon && <span className="icon">{startIcon}</span>}
+      <span>{text}</span>
+    </button>
+  );
+}

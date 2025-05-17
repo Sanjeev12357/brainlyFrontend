@@ -1,0 +1,98 @@
+/* Container with two columns */
+.signup-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Left section with image and text */
+.signup-left {
+  flex: 1;
+  background-color: #f7f7f7;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.signup-image {
+  width: 300px;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.info-text {
+  font-size: 1rem;
+  color: #444;
+  max-width: 400px;
+}
+
+/* Right section with form */
+.signup-card {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: white;
+  border-left: 1px solid #eee;
+}
+
+.signup-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+}
+
+.signup-input {
+  width: 100%;
+}
+
+/* Sign Up button */
+.signup-button {
+  padding: 0.75rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signup-button:hover:not(:disabled) {
+  background-color: #333;
+}
+
+/* Footer text */
+.signup-footer {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.signup-footer a {
+  color: #111;
+  text-decoration: underline;
+  font-weight: 500;
+}

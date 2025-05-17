@@ -1,12 +1,12 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import {  useRef } from "react"
 import { gsap } from "gsap"
-import { FileText, Hash, LinkIcon, MessageSquare, Plus, Search, Video } from "lucide-react"
+import { FileText, Hash, LinkIcon, MessageSquare, Search, Video } from "lucide-react"
 
 import { SidebarItem } from "./SidebarItem"
-import { Button } from "./ui/Button"
-import { Input } from "./ui/Input"
+
+import  Input  from "./ui/Input"
 import "./AppSidebar.css"
 import { useGSAP } from "@gsap/react"
 
@@ -49,10 +49,7 @@ export function AppSidebar() {
             <span>Second Brain</span>
           </div>
         </div>
-        <div className="sidebar-search">
-          <Search className="search-icon" />
-          <Input placeholder="Search..." className="search-input" />
-        </div>
+        
       </div>
 
       {/* Content */}
@@ -67,12 +64,7 @@ export function AppSidebar() {
       </div>
 
       {/* Footer */}
-      <div className="sidebar-footer">
-        <Button className="new-note-button">
-          <Plus className="button-icon" />
-          <span>New Note</span>
-        </Button>
-      </div>
+      
     </div>
   )
 }

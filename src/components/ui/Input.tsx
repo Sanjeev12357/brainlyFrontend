@@ -1,12 +1,35 @@
-import type React from "react"
-import { forwardRef } from "react"
-import "./Input.css"
+// Input.tsx
+import React from 'react';
+import './Input.css'; // Import the CSS
 
-export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface InputProps {
+  label: string;
+  placeholder?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  type?: string;
+  value?: string;
+  name?: string;
+}
 
-const Input = forwardRef<HTMLInputElement, InputProps>(({ className, type, ...props }, ref) => {
-  return <input type={type} className={`input ${className || ""}`} ref={ref} {...props} />
-})
-Input.displayName = "Input"
-
-export { Input }
+export default function Input({
+  label,
+  placeholder,
+  onChange,
+  type = 'text',
+  value,
+  name,
+}: InputProps) {
+  return (
+    <div className="input-wrapper">
+      <input
+        type={type}
+        name={name}
+        value={value}
+        placeholder=" "
+        onChange={onChange}
+        className="custom-input"
+      />
+      <label className="custom-label">{label}</label>
+    </div>
+  );
+}

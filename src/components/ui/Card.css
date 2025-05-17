@@ -1,39 +1,66 @@
-.card {
-  border-radius: 8px;
-  background-color: var(--card);
-  color: var(--card-foreground);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  padding: 16px;
+.aceternity-card {
+  width: 500px;
+  height: 450px;
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.2s;
+  padding: 20px;
 }
 
-.card-header {
+.card-inner {
+  position: relative;
+  z-index: 2;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 24px 24px 0 24px;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.025em;
-  margin: 0;
-}
-
-.card-description {
-  font-size: 0.875rem;
-  color: var(--muted-foreground);
-  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #ffffff33;
 }
 
 .card-content {
-  padding: 24px;
-  padding-top: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.card-footer {
+.card-video {
+  border-radius: 12px;
+  border: none;
+}
+
+.card-tags {
+  margin-top: 16px;
   display: flex;
-  align-items: center;
-  padding: 0 24px 24px 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.card-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  color: #ccc;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+}
+
+.card-tag:hover {
+  background: rgba(255, 255, 255, 0.15);
 }

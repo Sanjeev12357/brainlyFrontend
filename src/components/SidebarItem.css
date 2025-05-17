@@ -1,5 +1,6 @@
 .sidebar-item {
   display: flex;
+  color:white;
   align-items: center;
   gap: 12px;
   border-radius: 6px;
@@ -37,11 +38,11 @@
 
 .sidebar-item-label {
   transition: color 0.2s ease;
-  color: var(--foreground);
+  color: white;
 }
 
 .sidebar-item-label.hovered {
-  color: var(--foreground);
+  color: white;
 }
 
 .sidebar-item-badge {
