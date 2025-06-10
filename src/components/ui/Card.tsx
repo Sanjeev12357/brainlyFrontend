@@ -12,6 +12,19 @@ interface CardProps {
 
 export default function Card({ title, link, type, tags = [] }: CardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+ const getYouTubeEmbedLink = (url?: string): string | undefined => {
+  try {
+    const videoIdMatch = url?.match(/[?&]v=([^&]+)/);
+    if (videoIdMatch?.[1]) {
+      return `https://www.youtube.com/embed/${videoIdMatch[1]}`;
+    }
+  } catch (e) {
+    console.error("Invalid YouTube URL", e);
+  }
+  return undefined;
+};
+
+
 
   useGSAP(() => {
     if (!cardRef.current) return;
@@ -78,14 +91,15 @@ useEffect(() => {
         <div className="card-content">
           {type === 'youtube' && (
             <iframe
-              width="100%"
-              height="250"
-              src={link?.replace('watch', 'embed').replace('?v=', '/')}
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="card-video"
-            />
+  width="100%"
+  height="250"
+  src={getYouTubeEmbedLink(link? link : '')}
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowFullScreen
+  className="card-video"
+/>
+
           )}
 
           {type === 'twitter' && (
